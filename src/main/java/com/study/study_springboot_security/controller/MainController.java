@@ -23,6 +23,7 @@ public class MainController {
         modelAndView.setViewName(viewName);
         return modelAndView;
     }
+    
     @GetMapping({"/admin"})     // 관리자 접속하는 곳
     public ModelAndView admin(ModelAndView modelAndView){
         String viewName = "/WEB-INF/views/admin.jsp";
