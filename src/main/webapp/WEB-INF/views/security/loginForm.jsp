@@ -25,7 +25,6 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password"
                     required="">
             </p>
-            <input name="_csrf" type="hidden" value="17732bff-d414-4689-8c9c-770d8559de26">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
     </div>
