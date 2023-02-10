@@ -15,7 +15,7 @@ public class ManagerController {
         modelAndView.setViewName(viewName);
         return modelAndView;
     }
-    @GetMapping({"/manager/*"})   // ROLS_MANAGER or ROLS_ADMIN
+    @GetMapping({"/manager/*"})   // ROLE_MANAGER or ROLE_ADMIN
     public ModelAndView manager(ModelAndView modelAndView){
         String viewName = "/WEB-INF/views/manager/read.jsp";
         modelAndView.setViewName(viewName);
