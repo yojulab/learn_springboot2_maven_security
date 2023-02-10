@@ -35,7 +35,7 @@
                 <input type="phone" id="phone" name="phone" class="form-control" placeholder="phone"
                     required="" value="010-1234-5678">
             </p>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Join</button>
         </form>
     </div>
 </body>
