@@ -9,7 +9,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.study.study_springboot_security.configurations.PrincipalUser;
 import com.study.study_springboot_security.daos.SharedDao;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PrincipalUserService implements UserDetailsService {
 
     @Autowired
@@ -25,7 +27,7 @@ public class PrincipalUserService implements UserDetailsService {
 
         // session 등록
         PrincipalUser principalUser = new PrincipalUser(resultMap);
-        
+
         return principalUser;
     }
     
