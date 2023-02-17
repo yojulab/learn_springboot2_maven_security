@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.utils;
+package com.learn.learn_springboot_security.utils;
 
 import java.util.UUID;
 

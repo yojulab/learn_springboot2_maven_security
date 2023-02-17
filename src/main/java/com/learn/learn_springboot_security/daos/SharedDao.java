@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.daos;
+package com.learn.learn_springboot_security.daos;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

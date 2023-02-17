@@ -1,13 +1,13 @@
-package com.study.study_springboot_security;
+package com.learn.learn_springboot_security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudySpringbootSecurityApplication {
+public class LearnSpringbootSecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudySpringbootSecurityApplication.class, args);
+		SpringApplication.run(LearnSpringbootSecurityApplication.class, args);
 	}
 
 }

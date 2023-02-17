@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.controller;
+package com.learn.learn_springboot_security.controller;
 
 import java.util.Map;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.study.study_springboot_security.services.MemberWithAuthorityService;
+import com.learn.learn_springboot_security.services.MemberWithAuthorityService;
 
 @Controller
 public class MemberWithAuthorityController {

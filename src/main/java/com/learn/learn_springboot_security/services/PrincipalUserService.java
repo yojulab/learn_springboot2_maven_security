@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.services;
+package com.learn.learn_springboot_security.services;
 
 import java.util.Map;
 
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.study.study_springboot_security.configurations.PrincipalUser;
-import com.study.study_springboot_security.daos.SharedDao;
+import com.learn.learn_springboot_security.configurations.PrincipalUser;
+import com.learn.learn_springboot_security.daos.SharedDao;
 import org.springframework.stereotype.Service;
 
 @Service

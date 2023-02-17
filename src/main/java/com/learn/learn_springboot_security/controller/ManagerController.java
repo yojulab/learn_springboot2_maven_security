@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.controller;
+package com.learn.learn_springboot_security.controller;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

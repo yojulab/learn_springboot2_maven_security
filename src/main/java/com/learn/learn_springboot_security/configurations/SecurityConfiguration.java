@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.configurations;
+package com.learn.learn_springboot_security.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.study.study_springboot_security.configurations;
+package com.learn.learn_springboot_security.configurations;
 
 import java.util.Collection;
 import java.util.HashMap;
