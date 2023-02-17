@@ -32,6 +32,17 @@
         </div>
     </sec:authorize>
     <hr />
+    <div>authorizeRequests() in SecurityConfiguration.java</div>
+    <div>
+        <a href="/admin">admin.jsp</a>
+    </div>
+    <div>
+        <a href="/admin/read">/admin/*.jsp with Role</a>
+    </div>
+    <div>
+        <a href="/manager/read">/manager/*.jsp with Role</a>
+    </div>
+
 </body>
 
 </html>
