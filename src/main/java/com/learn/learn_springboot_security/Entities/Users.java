@@ -9,6 +9,10 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+// create table userdata (
+//   id    VARCHAR(50) NULL     COMMENT '회원 시퀀스',
+//   username    VARCHAR(50) NULL     COMMENT '회원 이름'
+// );
 @Entity
 @Table(name = "userdata")
 @Getter
