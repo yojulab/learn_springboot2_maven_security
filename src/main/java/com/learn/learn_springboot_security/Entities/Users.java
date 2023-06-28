@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,8 +13,9 @@ import lombok.Setter;
 @Table(name = "userdata")
 @Getter
 @Setter
+@Data
 public class Users {
     @Id
-    private int id;
+    private String id;
     private String username;
 }
