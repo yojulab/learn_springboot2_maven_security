@@ -29,6 +29,8 @@ public class UsersController {
     // input Headers : Content-Type=application/json
     // input Body > raw : {"id": "U-01","username": "Yojulab"}
     @PostMapping("/create")
+    //public ResponseEntity<Object> create(@RequestBody Object users) {
+    //Object result = null;   //userssRepository.save(users);
     public ResponseEntity<Object> create(@RequestBody Users users) {
         Object result = userssRepository.save(users);
         return ResponseEntity.ok()
