@@ -9,10 +9,10 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class PrincipalUser implements UserDetails{
+public class PrincipalUser implements UserDetails {
 
-    private Map userInfo ;
-    private String memberName ;
+    private Map userInfo;
+    private String memberName;
 
     public Map getUserInfo() {
         return userInfo;
@@ -22,10 +22,10 @@ public class PrincipalUser implements UserDetails{
         return memberName;
     }
 
-    public PrincipalUser(Map userInfo){
-        this.userInfo = userInfo ;
+    public PrincipalUser(Map userInfo) {
+        this.userInfo = userInfo;
         int i = 1;
-        this.memberName = (String)userInfo.get("NAME");
+        this.memberName = (String) userInfo.get("NAME");
     }
 
     @Override
@@ -33,19 +33,20 @@ public class PrincipalUser implements UserDetails{
         // 권한들
         Collection<GrantedAuthority> collections = new ArrayList<>();
         collections.add(new SimpleGrantedAuthority((String) userInfo.get("AUTHORITY")));
+        collections.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
         return collections;
     }
 
     @Override
     public String getPassword() {
         // password
-        return (String)userInfo.get("PASSWORD");
+        return (String) userInfo.get("PASSWORD");
     }
 
     @Override
     public String getUsername() {
         // ID
-        return (String)userInfo.get("MEMBER_ID");
+        return (String) userInfo.get("MEMBER_ID");
     }
 
     @Override
@@ -71,5 +72,5 @@ public class PrincipalUser implements UserDetails{
         // 휴먼 계정 여부
         return true;
     }
-    
+
 }

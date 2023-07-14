@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 @Configuration
 public class SecurityConfiguration {
     @Bean
@@ -15,18 +16,23 @@ public class SecurityConfiguration {
         // 권한에 대한 부분 : url & roles : user url & roles
         // url, roles from Dao
         httpSecurity.authorizeRequests()
-            // .antMatchers("/").authenticated()   // 로그인 여부만 판단.
-            // .antMatchers("/admin").access("hasRole('ROLE_ADMIN')") // 로그인 & 권한
-            .antMatchers("/admin").authenticated()
-            .antMatchers("/manager/*").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')")
-            .antMatchers("/admin/*").access("hasRole('ROLE_ADMIN')")
-            .anyRequest().permitAll();      // 설정한 URL 이외는 접근 가능(로그인 & 로그아웃).
-        
+                // .antMatchers("/").authenticated() // 로그인 여부만 판단.
+                // .antMatchers("/admin").access("hasRole('ROLE_ADMIN')") // 로그인 & 권한
+                .antMatchers("/admin").authenticated()
+                .antMatchers("/manager/*").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')")
+                .antMatchers("/admin/*").access("hasRole('ROLE_ADMIN')")
+                .anyRequest().permitAll(); // 설정한 URL 이외는 접근 가능(로그인 & 로그아웃).
+
         // 로그인에 대한 부분
         httpSecurity.formLogin().loginPage("/loginForm")
-            .failureUrl("/loginForm?fail=true")
-            .loginProcessingUrl("/login")
-            .defaultSuccessUrl("/");
+                .failureUrl("/loginForm?fail=true")
+                .loginProcessingUrl("/login")
+                .defaultSuccessUrl("/");
+
+        // 로그아웃 대한 부분
+        httpSecurity.logout()
+                .logoutSuccessUrl("/main")
+                .invalidateHttpSession(true).deleteCookies("JSESSIONID");
 
         return httpSecurity.build();
     }
